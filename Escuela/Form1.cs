@@ -72,10 +72,10 @@ namespace Escuela
                 );
 
                 // 1. Recargamos la tabla en tiempo real
-                cargarAlumnos();
+                
 
                 // 2. Limpiamos las cajas de texto
-                LimpiarFormulario();
+               
             }
             catch (Exception ex)
             {
@@ -86,6 +86,8 @@ namespace Escuela
                     MessageBoxIcon.Error
                 );
             }
+            cargarAlumnos();
+            LimpiarCampos();
         }
 
         private void cargarAlumnos()
@@ -126,16 +128,16 @@ namespace Escuela
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            LimpiarFormulario();
+            LimpiarCampos();
         }
 
-        private void LimpiarFormulario()
+        private void LimpiarCampos()
         {
             txtmatricula.Clear();
             txtnombre.Clear();
             txtgrupo.Clear();
             txtespecialidad.Clear();
-            nudsemestre.Value = nudsemestre.Minimum;
+            nudsemestre.Value = 1;
             txtmatricula.Focus();
         }
 

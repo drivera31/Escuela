@@ -42,6 +42,7 @@
             txtnombre = new TextBox();
             txtmatricula = new TextBox();
             dgvAlumnos = new DataGridView();
+            openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)nudsemestre).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             SuspendLayout();
@@ -173,6 +174,10 @@
             dgvAlumnos.Size = new Size(776, 356);
             dgvAlumnos.TabIndex = 13;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -217,5 +222,6 @@
         private TextBox txtnombre;
         private TextBox txtmatricula;
         private DataGridView dgvAlumnos;
+        private OpenFileDialog openFileDialog1;
     }
 }
